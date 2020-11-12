@@ -1,18 +1,18 @@
 # examples
 
-Collect some common examples in your development.
+收集自己在开发中一些常用示例。
 
 ![nodejs](https://img.shields.io/badge/nodejs-%3E%3D8.16.0-orange)
 ![lerna](https://img.shields.io/badge/lerna-3.22.1-green)
 [![Gratipay][licensed-image]][licensed-url]
 
-## Examples
+## 示例集
 
-- `webpack-ts` - compile `Typescript` used by `Webpack`
+- `webpack-ts` - 使用 `webpack` 编译 `typescript` 文件
 
-## Usages
+## 使用方法
 
-Installing all modules
+安装所有模块
 ```bash
 $ yarn bootstrap
 ```
