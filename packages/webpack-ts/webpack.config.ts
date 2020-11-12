@@ -1,13 +1,13 @@
-const path = require('path')
-const webpack = require('webpack')
-const nodeExternals = require('webpack-node-externals')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+import * as path from 'path'
+import * as webpack from 'webpack'
+import * as nodeExternals from 'webpack-node-externals'
+import * as FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
 
 const env = process.env.NODE_ENV || 'production'
 const entryPath = path.resolve(process.cwd(), 'src')
 const buildPath = path.resolve(process.cwd(), 'dist')
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: env === 'development' ? 'development' : 'production',
   target: 'node',
   devtool: 'source-map',
@@ -80,3 +80,5 @@ module.exports = {
     }),
   ],
 }
+
+export default config
