@@ -8,7 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "yarn clean && lerna bootstrap",
+    "clean": "lerna clean -y"
   },
   "repository": "https://github.com/kenote/examples.git",
   "author": "thondery <thondery@163.com>",
