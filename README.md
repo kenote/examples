@@ -8,7 +8,8 @@ Collect some common examples in your development.
 
 ## Examples
 
-- `webpack-ts` - compile `Typescript` used by `Webpack`
+- `webpack-ts` - Use `Webpack` to compile `Typescript` style `Javasctipt` modules.
+- `module-ts` - Use `tsc` to compile `Typescript` style `Javasctipt` modules.
 
 ## Usages
 
