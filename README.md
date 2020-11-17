@@ -8,8 +8,9 @@ Collect some common examples in your development.
 
 ## Examples
 
-- `webpack-ts` - Use `Webpack` to compile `Typescript` style `Javasctipt` modules.
-- `module-ts` - Use `tsc` to compile `Typescript` style `Javasctipt` modules.
+- [webpack-ts](./packages/webpack-ts) - Use `Webpack` to compile `Typescript` style `Javasctipt` modules.
+- [module-ts](./packages/module-ts) - Use `tsc` to compile `Typescript` style `Javasctipt` modules.
+- [vue-component](./packages/vue-component) - `Vue` component library.
 
 ## Usages
 

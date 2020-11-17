@@ -1,0 +1,8 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "index.js",
+  "author": "thondery",
+  "license": "MIT"
+}
