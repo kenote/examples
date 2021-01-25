@@ -15,7 +15,7 @@ import { updatecCounter } from './seq'
 export default class Store {
 
   @prop({ unique: true, default: 0 })
-  public id!: number
+  public id?: number
 
   @prop({ type: Array, default: [] })
   public upload_type!: string[]

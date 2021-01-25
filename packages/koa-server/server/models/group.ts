@@ -34,7 +34,7 @@ export default class Group {
   public access!: string[]
 
   @prop({ ref: Store })
-  public store!: Ref<Store>
+  public store!: Store
 
   @prop({ default: false })
   public default!: boolean

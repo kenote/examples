@@ -34,4 +34,7 @@ export default class Team {
 
   @prop()
   public description!: string
+
+  @prop()
+  public owner?: string
 }

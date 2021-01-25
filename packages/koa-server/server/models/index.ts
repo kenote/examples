@@ -1,4 +1,4 @@
-import mongoose, { ConnectionOptions } from 'mongoose'
+import mongoose from 'mongoose'
 import { getModelForClass, setGlobalOptions, Severity } from '@typegoose/typegoose'
 import Store from './store'
 import Group from './group'
@@ -10,6 +10,10 @@ import Plan from './plan'
 import Proto from './proto'
 import Ticket from './ticket'
 import Verify from './verify'
+import { loadConfig } from '@kenote/config'
+import { ServerConfigure } from '@/types/config'
+
+const { mongoOpts } = loadConfig<ServerConfigure>('config/server')
 
 setGlobalOptions({ 
   options: { 
@@ -17,15 +21,12 @@ setGlobalOptions({
   }
 })
 
-const uris = 'mongodb://localhost:27017/koa-test'
-const options: ConnectionOptions = { 
-  useNewUrlParser: true, 
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-}
-
 export async function connect () {
+  if (!mongoOpts) {
+    console.error(`No configuration found of MongoDB.`)
+    process.exit(1)
+  }
+  let { uris, options } = mongoOpts
   try {
     await mongoose.connect(uris, options)
     console.log(`connect to ${uris}`)
