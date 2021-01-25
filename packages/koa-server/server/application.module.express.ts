@@ -3,14 +3,14 @@ import StaticModule from './application.static'
 import TemplateModule from './application.template'
 import Restful from './middleware/restful'
 import ControllerV1Module from './application.controller.v1'
-import sessionPlugin from './pulgins/session'
-import passportPlugin from './pulgins/passport'
-import nuxtPulgin from './pulgins/nuxt'
-import graphqlPulgin from './pulgins/graphql'
+import sessionPlugin from './pulgins/session/express'
+import passportPlugin from './pulgins/passport/express'
+import nuxtPulgin from './pulgins/nuxtjs/express'
+import graphqlPulgin from './pulgins/graphql/express'
 
 @Module({
   imports: [ StaticModule, TemplateModule, ControllerV1Module ],
-  plugins: [ sessionPlugin, passportPlugin, graphqlPulgin.handler ],
+  plugins: [ sessionPlugin, passportPlugin, graphqlPulgin ],
   middlewares: [ Restful ],
   ssrPlugins: [ nuxtPulgin ],
   httpException: {
@@ -22,4 +22,4 @@ import graphqlPulgin from './pulgins/graphql'
     }
   }
 })
-export default class ApplicationModule {}
+export class ApplicationModule {}

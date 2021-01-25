@@ -1,0 +1,1 @@
+export { GroupResolver } from './group'
