@@ -15,6 +15,7 @@ async function nuxtReady () {
 }
 
 const nuxtPulgin: IModule.ssrPlugin = {
+  prefix: '*',
   handler: [
     toRequestHandler(ctx => {
       ctx.status(200)

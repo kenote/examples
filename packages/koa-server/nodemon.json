@@ -1,13 +1,15 @@
 {
   "restartable": "rs",
   "ignore": [".git", "node_modules/", "dist/", "coverage/"],
-  "watch": ["server/", "client/", "nuxt.config.js"],
+  "watch": ["server/", "client/", "nuxt.config.js", "config/"],
   "execMap": {
     "ts": "node -r ts-node/register -r tsconfig-paths/register"
   },
   "env": {
     "TS_NODE_PROJECT": "server/tsconfig.json",
-    "NODE_ENV": "development"
+    "NODE_ENV": "development",
+    "USE_ENGINE": "express",
+    "USE_PORT": 4000
   },
-  "ext": "json, ts, js"
+  "ext": "json, ts, js, yaml"
 }
