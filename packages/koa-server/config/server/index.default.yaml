@@ -1,0 +1,25 @@
+
+name                 : kenote-with-nuxt-ssr
+
+# 服务器IP；默认 0.0.0.0
+host                 : 0.0.0.0
+
+# 服务器端口；此为内部运行端口，请将此端口映射到 nginx 上
+port                 : 4000
+
+secret               : kenote
+
+# 设置 Redis
+redisOpts:
+  host                 : 127.0.0.1
+  port                 : 6379
+  db                   : 0
+
+# 设置 MongoDB
+mongoOpts:
+  uris                 : mongodb://localhost:27017/koa-test
+  options:
+    useNewUrlParser      : true
+    useCreateIndex       : true
+    useUnifiedTopology   : true
+    useFindAndModify     : false
